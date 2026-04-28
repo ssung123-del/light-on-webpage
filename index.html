@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>2026 새생명축제 Light On — 오륜교회</title>
+    <title>2026 오륜교회 새생명축제 Light On</title>
     <meta
       name="description"
       content="2026 오륜교회 새생명축제 Light On: 우리의 모든 일상이 전도가 됩니다. 가장 설득력 있는 전도지는 당신의 행복입니다."
     />
     <!-- OG 메타 태그 — 카카오톡/SNS 공유 미리보기 -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="2026 새생명축제 Light On" />
+    <meta property="og:title" content="2026 오륜교회 새생명축제 Light On" />
     <meta property="og:description" content="우리의 모든 일상이 전도가 됩니다. 가장 설득력 있는 전도지는 당신의 행복입니다." />
-    <meta property="og:image" content="assets/light-on-hero-new.png" />
+    <meta property="og:image" content="assets/light-on-hero-new.webp" />
     <!-- Pretendard 한국어 폰트 CDN — 프리미엄 타이포그래피의 핵심 -->
     <link
       rel="stylesheet"
@@ -83,6 +83,7 @@
         content: "";
         pointer-events: none;
         mix-blend-mode: multiply;
+        will-change: transform;
       }
 
       a {
@@ -613,39 +614,7 @@
         box-shadow: 0 14px 30px rgba(2, 10, 16, 0.14);
       }
 
-      .mission-intro {
-        display: grid;
-        grid-template-columns: minmax(0, 0.62fr) minmax(280px, 0.38fr);
-        gap: 18px;
-        margin-bottom: 18px;
-      }
 
-      .mission-note {
-        min-height: 156px;
-        padding: 26px;
-        border: 1px solid #b8d7ef;
-        border-radius: var(--radius);
-        background:
-          linear-gradient(135deg, #ffffff, #eef8ff),
-          #ffffff;
-      }
-
-      .mission-note strong {
-        display: block;
-        color: var(--blue);
-        font-size: 23px;
-        font-weight: 950;
-        line-height: 1.35;
-      }
-
-      .mission-note span {
-        display: block;
-        margin-top: 12px;
-        color: var(--muted);
-        font-size: 15px;
-        font-weight: 750;
-        line-height: 1.6;
-      }
 
       .wishlist-list {
         display: grid;
@@ -1025,8 +994,7 @@
       /* === Spring 기반 인터랙션 (Supanova 시그니처 모션) === */
       .speaker-card,
       .invite-card,
-      .meta-chip,
-      .mission-note {
+      .meta-chip {
         transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
@@ -1045,11 +1013,6 @@
       .meta-chip:hover {
         transform: translateY(-2px);
         box-shadow: 0 18px 38px rgba(2, 10, 16, 0.18);
-      }
-
-      .mission-note:hover {
-        transform: translateY(-2px);
-        border-color: var(--blue);
       }
 
       /* 버튼 active + focus 상태 */
@@ -1228,7 +1191,6 @@
 
         .section-head,
         .seminar-panel,
-        .mission-intro,
         .outreach-band,
         .invite-grid {
           grid-template-columns: 1fr;
@@ -1627,7 +1589,7 @@
     </main>
 
     <footer class="footer">
-      <span>2026 새생명축제 Light On</span>
+      <span>2026 오륜교회 새생명축제 Light On</span>
       <span>오륜교회</span>
     </footer>
 
@@ -1694,7 +1656,7 @@
         let lastScroll = 0;
         window.addEventListener("scroll", () => {
           const scrollY = window.scrollY;
-          // 히어로 영역을 볬어나면 네비 배경 강화
+          // 히어로 영역을 벗어나면 네비 배경 강화
           if (scrollY > 100) {
             header.style.background = "rgba(255, 255, 255, 0.96)";
             header.style.boxShadow = "0 4px 20px rgba(8, 31, 55, 0.08)";
