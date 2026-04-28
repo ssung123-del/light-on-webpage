@@ -1,0 +1,1832 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2026 새생명축제 Light On — 오륜교회</title>
+    <meta
+      name="description"
+      content="2026 오륜교회 새생명축제 Light On: 우리의 모든 일상이 전도가 됩니다. 가장 설득력 있는 전도지는 당신의 행복입니다."
+    />
+    <!-- OG 메타 태그 — 카카오톡/SNS 공유 미리보기 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="2026 새생명축제 Light On" />
+    <meta property="og:description" content="우리의 모든 일상이 전도가 됩니다. 가장 설득력 있는 전도지는 당신의 행복입니다." />
+    <meta property="og:image" content="assets/light-on-hero-new.png" />
+    <!-- Pretendard 한국어 폰트 CDN — 프리미엄 타이포그래피의 핵심 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css"
+    />
+    <!-- Outfit 영문 디스플레이 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon — 인라인 SVG 등불 아이콘 -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕯️</text></svg>" />
+    <style>
+      :root {
+        --blue: #00589b;
+        --blue-deep: #07345d;
+        --blue-ink: #061a2f;
+        --sky: #e7eef4;
+        --gold: #ffc928;
+        --gold-soft: #fff3ba;
+        --green: #0d674b;
+        --ink: #111827;
+        --text: #243143;
+        --muted: #667085;
+        --line: #d4d9da;
+        --surface: #fffdf8;
+        --wash: #f3efe7;
+        --paper: #f7f1e7;
+        --paper-deep: #e9dfcf;
+        --radius: 8px;
+        --shadow: 0 22px 54px rgba(8, 31, 55, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at 14% 0%, rgba(255, 201, 40, 0.08), transparent 26rem),
+          radial-gradient(circle at 100% 12%, rgba(0, 88, 155, 0.08), transparent 30rem),
+          linear-gradient(180deg, #f5f0e8 0%, #f7f2ea 100%);
+        color: var(--text);
+        font-family:
+          "Pretendard", -apple-system, BlinkMacSystemFont, system-ui,
+          sans-serif;
+        letter-spacing: 0;
+        position: relative;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+      }
+
+      body::before {
+        position: fixed;
+        inset: 0;
+        background-image:
+          radial-gradient(rgba(17, 24, 39, 0.025) 0.7px, transparent 0.7px),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(0, 0, 0, 0.025));
+        background-size: 9px 9px, 100% 100%;
+        opacity: 0.3;
+        content: "";
+        pointer-events: none;
+        mix-blend-mode: multiply;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .site-header {
+        position: fixed;
+        z-index: 20;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 16px clamp(20px, 4vw, 58px);
+        background: rgba(255, 255, 255, 0.86);
+        border-bottom: 1px solid rgba(0, 88, 155, 0.12);
+        backdrop-filter: blur(18px);
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--blue-deep);
+        font-weight: 950;
+      }
+
+      .brand-mark {
+        width: 30px;
+        height: 30px;
+        border: 8px solid var(--blue);
+        border-right-color: var(--gold);
+        border-radius: 50%;
+        box-shadow: 0 0 28px rgba(255, 201, 40, 0.42);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: clamp(16px, 2.4vw, 34px);
+        color: #32506a;
+        font-size: 15px;
+        font-weight: 900;
+      }
+
+      .nav a:hover {
+        color: var(--blue);
+      }
+
+      .hero {
+        position: relative;
+        min-height: 96svh;
+        overflow: hidden;
+        color: #ffffff;
+        background: #06131f;
+        isolation: isolate;
+      }
+
+      .hero::before {
+        position: absolute;
+        inset: 0;
+        z-index: -3;
+        background-image: url("assets/light-on-hero-new.webp");
+        background-position: 30% 58%;
+        background-size: cover;
+        content: "";
+        filter: saturate(1.02) contrast(1.02);
+        transform: scale(1.02);
+      }
+
+      .hero::after {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        background:
+          linear-gradient(90deg, rgba(3, 13, 23, 0.28), rgba(3, 13, 23, 0.48) 42%, rgba(3, 13, 23, 0.86) 74%),
+          linear-gradient(180deg, rgba(3, 13, 23, 0.54), rgba(3, 13, 23, 0.12) 38%, #06131f 100%),
+          radial-gradient(circle at 22% 76%, rgba(255, 201, 40, 0.26), transparent 18rem),
+          radial-gradient(circle at 78% 34%, rgba(13, 103, 75, 0.24), transparent 18rem);
+        content: "";
+      }
+
+      .hero-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 0.94fr) minmax(430px, 0.72fr);
+        align-items: center;
+        width: min(1220px, calc(100% - 40px));
+        min-height: 96svh;
+        margin: 0 auto;
+        padding: 110px 0 86px;
+      }
+
+      .hero-copy {
+        grid-column: 2;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin: 0 0 18px;
+        color: #fff7d3;
+        font-size: clamp(18px, 2vw, 26px);
+        font-weight: 950;
+      }
+
+      .eyebrow::before,
+      .eyebrow::after {
+        width: clamp(42px, 7vw, 92px);
+        height: 1px;
+        background: rgba(255, 247, 211, 0.62);
+        content: "";
+      }
+
+      h1 {
+        margin: 0;
+        font-family: "Outfit", "Pretendard", sans-serif;
+        font-size: clamp(82px, 12vw, 160px);
+        font-weight: 950;
+        line-height: 0.86;
+        letter-spacing: 0;
+      }
+
+      h1 span {
+        display: block;
+      }
+
+      .on-word i {
+        display: inline-grid;
+        place-items: center;
+        width: 0.8em;
+        height: 0.8em;
+        margin-right: 0.06em;
+        border-radius: 50%;
+        background: #ffffff;
+        color: transparent;
+        box-shadow:
+          inset 0 0 0 0.2em var(--gold),
+          0 0 42px rgba(255, 201, 40, 0.86),
+          0 0 92px rgba(255, 171, 61, 0.42);
+        vertical-align: -0.04em;
+      }
+
+      .hero-slogan {
+        max-width: 650px;
+        margin: 28px 0 0;
+        font-size: clamp(22px, 2.4vw, 34px);
+        font-weight: 950;
+        line-height: 1.38;
+      }
+
+      .verse {
+        max-width: 650px;
+        margin: 26px 0 0;
+        padding-left: 18px;
+        border-left: 4px solid var(--gold);
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 16px;
+        font-weight: 750;
+        line-height: 1.7;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 34px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50px;
+        padding: 0 22px;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: var(--radius);
+        font-size: 15px;
+        font-weight: 950;
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease,
+          background 180ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+      }
+
+      .button.primary {
+        border-color: rgba(255, 201, 40, 0.72);
+        background: linear-gradient(135deg, var(--gold), #ffad32);
+        color: #1b1400;
+        box-shadow: 0 18px 46px rgba(255, 201, 40, 0.22);
+      }
+
+      .button.ghost {
+        background: rgba(255, 255, 255, 0.09);
+      }
+
+      .section {
+        scroll-margin-top: 76px;
+        padding: clamp(82px, 10vw, 136px) clamp(20px, 4vw, 58px);
+      }
+
+      .section.blue {
+        background:
+          radial-gradient(circle at 88% 16%, rgba(0, 88, 155, 0.08), transparent 34rem),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.12)),
+          var(--paper);
+      }
+
+      .section.deep {
+        background:
+          radial-gradient(circle at 14% 18%, rgba(255, 201, 40, 0.14), transparent 28rem),
+          linear-gradient(135deg, #102531, #0c3e57 52%, #18463a);
+        color: #ffffff;
+      }
+
+      .wrap {
+        width: min(1220px, 100%);
+        margin: 0 auto;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.82fr) minmax(260px, 0.42fr);
+        gap: 34px;
+        align-items: end;
+        margin-bottom: 34px;
+      }
+
+      .kicker {
+        margin: 0 0 12px;
+        color: var(--blue);
+        font-size: 14px;
+        font-weight: 950;
+      }
+
+      .deep .kicker {
+        color: var(--gold);
+      }
+
+      h2 {
+        margin: 0;
+        color: var(--ink);
+        font-size: clamp(38px, 5vw, 70px);
+        font-weight: 950;
+        line-height: 1.06;
+        letter-spacing: 0;
+        text-wrap: balance;
+      }
+
+      .deep h2 {
+        color: #ffffff;
+      }
+
+      .section-lead {
+        margin: 0;
+        color: var(--muted);
+        font-size: 18px;
+        font-weight: 750;
+        line-height: 1.74;
+        text-wrap: balance;
+      }
+
+      .deep .section-lead {
+        color: rgba(255, 255, 255, 0.74);
+      }
+
+      .seminar-panel {
+        display: grid;
+        gap: 18px;
+      }
+
+      .seminar-copy {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+        min-height: auto;
+        padding: 26px 30px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: var(--radius);
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
+          rgba(9, 28, 42, 0.52);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      }
+
+      .seminar-copy::before {
+        position: absolute;
+        inset: 0;
+        background-image:
+          radial-gradient(rgba(255, 255, 255, 0.08) 0.8px, transparent 0.8px),
+          linear-gradient(135deg, rgba(255, 201, 40, 0.08), transparent 46%);
+        background-size: 8px 8px, 100% 100%;
+        mix-blend-mode: screen;
+        opacity: 0.18;
+        content: "";
+        pointer-events: none;
+      }
+
+      .seminar-copy strong,
+      .seminar-copy p,
+      .seminar-copy .button {
+        position: relative;
+        z-index: 1;
+      }
+
+      .seminar-copy strong {
+        display: inline-flex;
+        width: fit-content;
+        padding: 10px 14px;
+        border: 1px solid rgba(255, 201, 40, 0.34);
+        border-radius: 999px;
+        color: var(--gold-soft);
+        font-size: 16px;
+        font-weight: 950;
+        letter-spacing: 0.02em;
+      }
+
+      .seminar-copy p {
+        max-width: 760px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: clamp(22px, 2.4vw, 34px);
+        font-weight: 950;
+        line-height: 1.24;
+        text-wrap: balance;
+      }
+
+      .speaker-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      /* === 시네마틱 스피커 카드 === */
+      .speaker-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-height: 520px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        background: #0a1929;
+        box-shadow: 0 28px 56px rgba(2, 10, 16, 0.32);
+      }
+
+      /* 스피커 이미지 — 카드 전체에 배경처럼 깔림 */
+      .speaker-card > img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 20%;
+        filter: brightness(1.0) contrast(1.02);
+        z-index: 0;
+      }
+
+      .speaker-card[data-tone="mono"] > img {
+        filter: grayscale(0.5) brightness(0.95) contrast(1.05);
+      }
+
+      .speaker-card[data-tone="warm"] > img {
+        filter: sepia(0.06) brightness(1.0) contrast(1.02);
+      }
+
+      /* 하단 그래디언트 오버레이 */
+      .speaker-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          transparent 30%,
+          rgba(6, 19, 31, 0.3) 50%,
+          rgba(6, 19, 31, 0.88) 75%,
+          rgba(6, 19, 31, 0.98) 100%
+        );
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .speaker-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 22px 22px 10px;
+        color: #ffffff;
+      }
+
+      .speaker-date {
+        color: var(--gold);
+        font-size: 18px;
+        font-weight: 950;
+        letter-spacing: 0;
+        white-space: nowrap;
+      }
+
+      .speaker-meta {
+        display: inline-flex;
+        align-items: center;
+        padding: 7px 9px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 11px;
+        font-weight: 900;
+        line-height: 1;
+        white-space: nowrap;
+      }
+
+      .speaker-info {
+        position: relative;
+        z-index: 2;
+        padding: 24px;
+        color: #ffffff;
+      }
+
+      .speaker-info span {
+        color: var(--gold);
+        font-size: 14px;
+        font-weight: 950;
+      }
+
+      .speaker-info h3 {
+        margin: 8px 0 0;
+        color: #ffffff;
+        font-size: clamp(28px, 2.3vw, 38px);
+        font-weight: 950;
+        line-height: 1.08;
+        text-wrap: balance;
+        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      }
+
+      .speaker-info p {
+        margin: 10px 0 0;
+        color: rgba(255, 255, 255, 0.74);
+        font-size: 15px;
+        font-weight: 750;
+        line-height: 1.46;
+        text-wrap: balance;
+      }
+
+      .outreach-band {
+        display: grid;
+        grid-template-columns: 0.9fr 1fr;
+        gap: 24px;
+        align-items: center;
+        padding: 36px;
+        border-radius: 18px;
+        background:
+          linear-gradient(135deg, rgba(8, 20, 29, 0.72), rgba(10, 63, 87, 0.86) 48%, rgba(22, 69, 58, 0.8)),
+          radial-gradient(circle at 22% 34%, rgba(255, 201, 40, 0.1), transparent 16rem);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.08),
+          0 26px 60px rgba(7, 19, 29, 0.18);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .outreach-band::before {
+        position: absolute;
+        inset: 0;
+        background-image:
+          radial-gradient(rgba(255, 255, 255, 0.08) 0.8px, transparent 0.8px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.05), transparent 34%, transparent 66%, rgba(255, 255, 255, 0.04));
+        background-size: 10px 10px, 100% 100%;
+        opacity: 0.22;
+        content: "";
+        pointer-events: none;
+      }
+
+      .outreach-band h3 {
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(34px, 4vw, 58px);
+        font-weight: 950;
+        line-height: 1.06;
+      }
+
+      .outreach-band p {
+        margin: 12px 0 0;
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 18px;
+        font-weight: 750;
+        line-height: 1.7;
+        max-width: 620px;
+      }
+
+      .outreach-meta {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .meta-chip {
+        padding: 22px 20px;
+        border-radius: 14px;
+        background: rgba(255, 253, 248, 0.92);
+        color: var(--blue-ink);
+        font-size: 18px;
+        font-weight: 950;
+        line-height: 1.42;
+        box-shadow: 0 14px 30px rgba(2, 10, 16, 0.14);
+      }
+
+      .mission-intro {
+        display: grid;
+        grid-template-columns: minmax(0, 0.62fr) minmax(280px, 0.38fr);
+        gap: 18px;
+        margin-bottom: 18px;
+      }
+
+      .mission-note {
+        min-height: 156px;
+        padding: 26px;
+        border: 1px solid #b8d7ef;
+        border-radius: var(--radius);
+        background:
+          linear-gradient(135deg, #ffffff, #eef8ff),
+          #ffffff;
+      }
+
+      .mission-note strong {
+        display: block;
+        color: var(--blue);
+        font-size: 23px;
+        font-weight: 950;
+        line-height: 1.35;
+      }
+
+      .mission-note span {
+        display: block;
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 15px;
+        font-weight: 750;
+        line-height: 1.6;
+      }
+
+      .wishlist-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 22px;
+        margin: 0;
+        padding: 28px;
+        border: 1px solid #b8d7ef;
+        border-radius: var(--radius);
+        background: #ffffff;
+        box-shadow: var(--shadow);
+        list-style: none;
+      }
+
+      .wishlist-item {
+        position: relative;
+        display: grid;
+        grid-template-columns: 34px minmax(0, 1fr);
+        gap: 14px;
+        align-items: start;
+        min-height: 76px;
+        padding: 18px 0;
+        border-bottom: 1px solid #e3edf5;
+      }
+
+      .wishlist-item:nth-last-child(-n + 2) {
+        border-bottom: 0;
+      }
+
+      .check-box {
+        width: 28px;
+        height: 28px;
+        margin-top: 2px;
+        border: 3px solid #8aa8cf;
+        border-radius: 5px;
+        background: #ffffff;
+      }
+
+      .wishlist-item strong {
+        display: block;
+        color: var(--ink);
+        font-size: 21px;
+        font-weight: 950;
+        line-height: 1.35;
+      }
+
+      .wishlist-item span {
+        display: block;
+        margin-top: 5px;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 1.45;
+      }
+
+      .invite-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 20px;
+        align-items: stretch;
+      }
+
+      /* 문화의 밤 통합 그룹 — 공유 헤더 + 두 카드 */
+      .culture-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: #0a1929;
+        box-shadow: 0 28px 56px rgba(2, 10, 16, 0.32);
+      }
+
+      .culture-group-header {
+        padding: 28px 34px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .culture-group-header .tag {
+        margin-bottom: 12px;
+      }
+
+      .culture-group-header h3 {
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(28px, 2.4vw, 44px);
+        font-weight: 950;
+        line-height: 1.1;
+        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      .culture-group-header h3 span {
+        display: inline;
+      }
+
+      .culture-group-header p {
+        margin: 10px 0 0;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 15px;
+        font-weight: 750;
+      }
+
+      .culture-group-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        flex: 1;
+      }
+
+      /* 그룹 내 카드 — 테두리/그림자 제거, 그룹이 감죄 */
+      .culture-group-cards .invite-card {
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        min-height: 0;
+        flex: 1;
+      }
+
+      .culture-group-cards .invite-card:first-child {
+        border-right: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .culture-group-cards .invite-copy {
+        padding: 20px 24px 24px;
+      }
+
+      .culture-group-cards .invite-copy h3 {
+        display: none;
+      }
+
+      /* === 시네마틱 초청 카드 === */
+      .invite-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-height: 580px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        background: #0a1929;
+        box-shadow: 0 28px 56px rgba(2, 10, 16, 0.32);
+      }
+
+      /* 인물 이미지 — 카드 전체에 배경처럼 깔림 (밝고 선명하게) */
+      .invite-card > .invite-hero-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 20%;
+        filter: brightness(0.92) contrast(1.05);
+        z-index: 0;
+      }
+
+      /* 하단 그래디언트 오버레이 — 하단에만 집중하여 인물은 선명하게 */
+      .invite-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          transparent 40%,
+          rgba(6, 19, 31, 0.3) 55%,
+          rgba(6, 19, 31, 0.88) 78%,
+          rgba(6, 19, 31, 0.98) 100%
+        );
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .invite-copy {
+        position: relative;
+        z-index: 2;
+        padding: 34px;
+      }
+
+      .tag {
+        display: inline-flex;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgba(255, 201, 40, 0.18);
+        color: var(--gold);
+        font-size: 13px;
+        font-weight: 950;
+        letter-spacing: 0.02em;
+      }
+
+      .invite-copy h3 {
+        margin: 18px 0 0;
+        color: #ffffff;
+        font-size: clamp(28px, 2.4vw, 44px);
+        font-weight: 950;
+        line-height: 1.1;
+        text-wrap: balance;
+        text-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+      }
+
+      .invite-copy h3 span {
+        display: block;
+      }
+
+      .invite-copy h3 .time-unit {
+        white-space: nowrap;
+      }
+
+      .invite-copy p {
+        margin: 12px 0 0;
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 15px;
+        font-weight: 750;
+        line-height: 1.7;
+        max-width: 42ch;
+        text-wrap: balance;
+      }
+
+
+
+      .closing {
+        padding: clamp(96px, 10vw, 152px) 20px;
+        color: #ffffff;
+        text-align: center;
+        background:
+          linear-gradient(180deg, rgba(5, 18, 27, 0.44), rgba(5, 18, 27, 0.94)),
+          radial-gradient(circle at 50% 72%, rgba(255, 201, 40, 0.26), transparent 20rem),
+          url("assets/light-on-hero-new.webp");
+        background-size: cover;
+        background-position: center 64%;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .closing::before {
+        position: absolute;
+        inset: 0;
+        background-image:
+          radial-gradient(rgba(255, 255, 255, 0.08) 0.7px, transparent 0.7px),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0.12));
+        background-size: 10px 10px, 100% 100%;
+        opacity: 0.24;
+        mix-blend-mode: screen;
+        content: "";
+      }
+
+      .closing > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .closing-mark {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 18px;
+        color: rgba(255, 247, 211, 0.9);
+        font-size: 15px;
+        font-weight: 950;
+        letter-spacing: 0.08em;
+      }
+
+      .closing-mark::before,
+      .closing-mark::after {
+        width: 44px;
+        height: 1px;
+        background: rgba(255, 247, 211, 0.6);
+        content: "";
+      }
+
+      .closing h2 {
+        max-width: 980px;
+        margin: 0 auto;
+        font-family: "Outfit", "Pretendard", sans-serif;
+        color: rgba(255, 255, 255, 0.94);
+        font-size: clamp(48px, 6.2vw, 92px);
+        line-height: 1.02;
+        text-shadow: 0 18px 42px rgba(0, 0, 0, 0.34);
+      }
+
+      .closing h2 span {
+        display: block;
+      }
+
+      .closing .light-on-word {
+        margin-top: 10px;
+        font-size: clamp(54px, 7vw, 110px);
+        letter-spacing: 0.01em;
+      }
+
+      .closing p {
+        max-width: 760px;
+        margin: 22px auto 0;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 20px;
+        font-weight: 750;
+        line-height: 1.7;
+        text-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+      }
+
+      /* === 위시리스트 참여하기 버튼 === */
+      .wishlist-cta {
+        display: flex;
+        justify-content: center;
+        margin-top: 32px;
+      }
+
+      .button.cta-blue {
+        border: none;
+        background: linear-gradient(135deg, var(--blue), #0a6fbd);
+        color: #ffffff;
+        font-size: 17px;
+        min-height: 56px;
+        padding: 0 32px;
+        border-radius: 12px;
+        box-shadow: 0 14px 38px rgba(0, 88, 155, 0.28);
+        gap: 8px;
+      }
+
+      .button.cta-blue:hover {
+        box-shadow: 0 18px 48px rgba(0, 88, 155, 0.36);
+      }
+
+      .button.cta-blue svg {
+        width: 18px;
+        height: 18px;
+        fill: currentColor;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 30px clamp(20px, 4vw, 58px);
+        color: #5c7285;
+        background: #ffffff;
+        border-top: 1px solid var(--line);
+        font-size: 14px;
+        font-weight: 850;
+      }
+
+
+      /* === 프리미엄 스크롤 진입 애니메이션 === */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(2rem);
+          filter: blur(4px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+          filter: blur(0);
+        }
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(2rem);
+        filter: blur(4px);
+      }
+
+      .reveal.visible {
+        animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        animation-delay: calc(var(--reveal-index, 0) * 80ms);
+      }
+
+      /* === Spring 기반 인터랙션 (Supanova 시그니처 모션) === */
+      .speaker-card,
+      .invite-card,
+      .meta-chip,
+      .mission-note {
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .speaker-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 36px 58px rgba(2, 10, 16, 0.32);
+      }
+
+      .invite-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 36px 72px rgba(2, 10, 16, 0.42);
+        border-color: rgba(255, 201, 40, 0.16);
+      }
+
+      .meta-chip:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 18px 38px rgba(2, 10, 16, 0.18);
+      }
+
+      .mission-note:hover {
+        transform: translateY(-2px);
+        border-color: var(--blue);
+      }
+
+      /* 버튼 active + focus 상태 */
+      .button:active {
+        transform: translateY(0) scale(0.97);
+      }
+
+      .button:focus-visible {
+        outline: 3px solid var(--gold);
+        outline-offset: 3px;
+      }
+
+      /* 네비게이션 링크 호버 — 밑줄 애니메이션 */
+      .nav a {
+        position: relative;
+        transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background: var(--blue);
+        border-radius: 1px;
+        transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .nav a:hover::after {
+        width: 100%;
+      }
+
+      /* 위시리스트 체크박스 — 인터랙티브 */
+      .wishlist-item {
+        cursor: pointer;
+        transition: background 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        border-radius: 6px;
+        padding: 18px 12px;
+        margin: 0 -12px;
+      }
+
+      .wishlist-item:hover {
+        background: rgba(0, 88, 155, 0.04);
+      }
+
+      .check-box {
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        display: grid;
+        place-items: center;
+      }
+
+      .check-box:hover {
+        border-color: var(--blue);
+        background: rgba(0, 88, 155, 0.06);
+      }
+
+      .wishlist-item.checked .check-box {
+        border-color: var(--blue);
+        background: var(--blue);
+      }
+
+      .wishlist-item.checked .check-box::after {
+        content: "✓";
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .wishlist-item.checked strong {
+        color: var(--blue);
+      }
+
+      /* === 모바일 네비게이션 === */
+      .menu-toggle {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        border: 1px solid rgba(0, 88, 155, 0.12);
+        border-radius: var(--radius);
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .menu-toggle:hover {
+        background: rgba(0, 88, 155, 0.06);
+      }
+
+      .menu-toggle span {
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: var(--blue-deep);
+        border-radius: 1px;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+      }
+
+      .menu-toggle span::before,
+      .menu-toggle span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--blue-deep);
+        border-radius: 1px;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .menu-toggle span::before { top: -6px; }
+      .menu-toggle span::after { bottom: -6px; }
+
+      /* 메뉴 열린 상태 — X 아이콘 전환 */
+      .menu-toggle.active span {
+        background: transparent;
+      }
+
+      .menu-toggle.active span::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      .menu-toggle.active span::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+      }
+
+      .mobile-nav {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 19;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .mobile-nav.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .mobile-nav a {
+        color: var(--blue-deep);
+        font-size: clamp(24px, 6vw, 34px);
+        font-weight: 950;
+        opacity: 0;
+        transform: translateY(1rem);
+        transition:
+          opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .mobile-nav.open a {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* 모바일 네비 링크 stagger 딜레이 */
+      .mobile-nav a:nth-child(1) { transition-delay: 80ms; }
+      .mobile-nav a:nth-child(2) { transition-delay: 160ms; }
+      .mobile-nav a:nth-child(3) { transition-delay: 240ms; }
+
+      /* === 섹션 사이 부드러운 전환 === */
+      .section + .section {
+        margin-top: -1px;
+      }
+
+      /* 숫자 타뷸러 정렬 */
+      .speaker-date,
+      .meta-chip {
+        font-variant-numeric: tabular-nums;
+      }
+
+      @media (max-width: 1060px) {
+        .site-header {
+          position: absolute;
+          background: rgba(255, 255, 255, 0.9);
+        }
+
+        .menu-toggle {
+          display: inline-flex;
+        }
+
+        .mobile-nav {
+          display: flex;
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .hero-inner {
+          display: flex;
+          align-items: flex-end;
+          min-height: 92svh;
+        }
+
+        .hero-copy {
+          width: min(680px, 100%);
+          padding-bottom: 42px;
+        }
+
+        .section-head,
+        .seminar-panel,
+        .mission-intro,
+        .outreach-band,
+        .invite-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .seminar-copy {
+          min-height: auto;
+          gap: 22px;
+        }
+
+        .speaker-card {
+          min-height: 470px;
+        }
+
+        /* 태블릿: culture-group 인물 보일 여유 확보 */
+        .culture-group-cards .invite-card {
+          min-height: 360px;
+        }
+
+        .culture-group-header h3 {
+          font-size: clamp(26px, 4vw, 38px);
+        }
+      }
+
+      @media (max-width: 660px) {
+        .site-header {
+          padding: 14px 18px;
+        }
+
+        .brand {
+          font-size: 15px;
+        }
+
+        .hero {
+          min-height: 760px;
+        }
+
+        .hero::before {
+          background-position: 28% 56%;
+        }
+
+        .hero::after {
+          background:
+            linear-gradient(180deg, rgba(3, 13, 23, 0.34), rgba(3, 13, 23, 0.12) 36%, #06131f 100%),
+            linear-gradient(90deg, rgba(3, 13, 23, 0.08), rgba(3, 13, 23, 0.82));
+        }
+
+        .hero-inner {
+          min-height: 760px;
+          width: min(100% - 32px, 1220px);
+          padding-bottom: 48px;
+        }
+
+        .eyebrow::before,
+        .eyebrow::after {
+          width: 34px;
+        }
+
+        h1 {
+          font-size: clamp(66px, 22vw, 104px);
+        }
+
+        .hero-slogan {
+          font-size: 21px;
+        }
+
+        .speaker-grid,
+        .wishlist-list,
+        .outreach-meta,
+        .culture-lineup {
+          grid-template-columns: 1fr;
+        }
+
+        .wishlist-list {
+          padding: 20px;
+        }
+
+        .wishlist-item:nth-last-child(-n + 2) {
+          border-bottom: 1px solid #e3edf5;
+        }
+
+        .wishlist-item:last-child {
+          border-bottom: 0;
+        }
+
+        .seminar-copy {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 24px;
+        }
+
+        .speaker-card {
+          min-height: 400px;
+        }
+
+        .speaker-top {
+          padding: 18px 18px 8px;
+        }
+
+        .speaker-info {
+          padding: 18px 20px 20px;
+        }
+
+        .invite-copy {
+          padding: 24px;
+        }
+
+        .invite-copy h3 {
+          margin-top: 14px;
+          font-size: clamp(28px, 8vw, 38px);
+        }
+
+        .invite-card {
+          min-height: 420px;
+        }
+
+        /* 모바일: 문화의 밤 그룹 내 카드에 인물 보일 여유 확보 */
+        .culture-group-cards .invite-card {
+          min-height: 320px;
+        }
+
+        .culture-group-header {
+          padding: 22px 24px 16px;
+        }
+
+        .culture-group-header h3 {
+          font-size: clamp(24px, 6vw, 34px);
+        }
+
+        .closing-mark::before,
+        .closing-mark::after {
+          width: 28px;
+        }
+
+        .closing .light-on-word {
+          margin-top: 6px;
+        }
+
+        .footer {
+          flex-direction: column;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition: none !important;
+          animation: none !important;
+        }
+
+        .reveal {
+          opacity: 1;
+          transform: none;
+          filter: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="오륜교회 Light On 처음으로">
+        <span class="brand-mark" aria-hidden="true"></span>
+        오륜교회
+      </a>
+      <nav class="nav" aria-label="주요 섹션">
+        <a href="#family">가정 세미나</a>
+        <a href="#invite">초청의 날</a>
+        <a href="#wishlist">위시리스트</a>
+      </nav>
+      <!-- 모바일 메뉴 토글 버튼 -->
+      <button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span>
+      </button>
+    </header>
+
+    <!-- 모바일 풀스크린 네비게이션 오버레이 -->
+    <nav class="mobile-nav" aria-label="모바일 네비게이션">
+      <a href="#family">가정 세미나</a>
+      <a href="#invite">초청의 날</a>
+      <a href="#wishlist">위시리스트</a>
+    </nav>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">2026 새생명축제</p>
+            <h1 id="hero-title">
+              <span>Light</span>
+              <span class="on-word"><i aria-hidden="true">O</i>N</span>
+            </h1>
+            <p class="hero-slogan">
+              우리의 모든 일상이 전도가 됩니다. 가장 설득력 있는 전도지는
+              당신의 행복입니다.
+            </p>
+            <p class="verse">
+              마태복음 5:15 “사람이 등불을 켜서 말 아래에 두지 아니하고
+              등경 위에 두나니 이러므로 집 안 모든 사람에게 비치느니라”
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfJlyvMXOAZVWZcZ-pP4EaTNe54ihep2gj_MZsWO85fP7dk3A/viewform" target="_blank" rel="noopener noreferrer">✏️ 태신자 작정하기</a>
+              <a class="button ghost" href="#family">가정 세미나 보기</a>
+              <a class="button ghost" href="#wishlist">위시리스트 참여</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="family" class="section deep">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <p class="kicker">FAMILY SEMINAR</p>
+              <h2>가정에 비치는 행복의 빛</h2>
+            </div>
+            <p class="section-lead">
+              하나님이 세우시는 행복한 가정이 가장 강력한 복음의 통로입니다.
+              세 번의 수요일, 다음 세대와 가정과 부모를 차례로 세웁니다.
+            </p>
+          </div>
+          <div class="seminar-panel">
+            <div class="seminar-copy reveal">
+              <strong>3인 3색 릴레이 세미나</strong>
+              <p>
+                매주 수요일 오전, 가정의 언어로 복음의 빛을 다시 켭니다.
+              </p>
+            </div>
+            <div class="speaker-grid">
+              <article class="speaker-card reveal" data-tone="mono">
+                <div class="speaker-top">
+                  <span class="speaker-date">5월 6일</span>
+                  <span class="speaker-meta">다음 세대</span>
+                </div>
+                <img src="assets/song-gilwon.webp" alt="송길원 목사 — 다음 세대 세미나 강사" loading="lazy" />
+                <div class="speaker-info">
+                  <span>첫 번째 수요일</span>
+                  <h3>송길원 목사</h3>
+                  <p>하나님이 세우시는 다음 세대</p>
+                </div>
+              </article>
+              <article class="speaker-card reveal" data-tone="warm">
+                <div class="speaker-top">
+                  <span class="speaker-date">5월 13일</span>
+                  <span class="speaker-meta">가정</span>
+                </div>
+                <img src="assets/choi-eunyoung.webp" alt="최은영 교수 — 가정 세미나 강사" loading="lazy" />
+                <div class="speaker-info">
+                  <span>두 번째 수요일</span>
+                  <h3>최은영 교수</h3>
+                  <p>하나님이 세우시는 가정</p>
+                </div>
+              </article>
+              <article class="speaker-card reveal">
+                <div class="speaker-top">
+                  <span class="speaker-date">5월 20일</span>
+                  <span class="speaker-meta">부모</span>
+                </div>
+                <img src="assets/kwak-sanghak.webp" alt="곽상학 목사 — 부모 세미나 강사" loading="lazy" />
+                <div class="speaker-info">
+                  <span>세 번째 수요일</span>
+                  <h3>곽상학 목사</h3>
+                  <p>하나님이 세우시는 부모</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="outreach-title">
+        <div class="wrap">
+          <div class="outreach-band reveal">
+            <div>
+              <p class="kicker">COMMUNITY OUTREACH</p>
+              <h3 id="outreach-title">교구 노방 전도의 날</h3>
+              <p>
+                우리가 하나 되어 기쁨으로 나갈 때, 지역 사회에 생명의 빛이
+                전달됩니다. 교구가 한마음으로 연대하여 누리는 공동체적 전도의
+                기쁨입니다.
+              </p>
+            </div>
+            <div class="outreach-meta">
+              <div class="meta-chip">5월 14일 목요일<br />13:30 - 16:00</div>
+              <div class="meta-chip">1층 그레이스홀<br />및 각 교구 거점</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="invite" class="section blue">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <p class="kicker">INVITATION DAY</p>
+              <h2>LIGHT ON 초청의 날</h2>
+            </div>
+            <p class="section-lead">
+              지친 마음에는 위로를, 닫힌 마음에는 문화의 언어를 건넵니다.
+              초청받은 분들이 자연스럽게 머물 수 있는 따뜻한 자리를 준비합니다.
+            </p>
+          </div>
+
+          <div class="invite-grid">
+            <!-- 위로의 아침 — 이호선 교수 -->
+            <article class="invite-card reveal">
+              <img class="invite-hero-img" src="assets/lee-hosun.webp" alt="이호선 교수 — 위로의 아침 강사" loading="lazy" />
+              <div class="invite-copy">
+                <span class="tag">위로의 아침</span>
+                <h3>
+                  <span>5월 27일 수요일</span>
+                  <span class="time-unit">오전 예배</span>
+                </h3>
+                <p>강사: 이호선 교수. 지친 영혼에게 전하는 따뜻한 위로와 복음의 소망.</p>
+              </div>
+            </article>
+            <!-- 문화의 밤 — 통합 그룹 -->
+            <div class="culture-group reveal">
+              <div class="culture-group-header">
+                <span class="tag">문화의 밤</span>
+                <h3>5월 30일 토요일 <span>오후 7:00</span></h3>
+                <p>닫힌 마음을 여는 문화의 언어, 감동의 무대.</p>
+              </div>
+              <div class="culture-group-cards">
+                <!-- 바이올린 -->
+                <article class="invite-card">
+                  <img class="invite-hero-img" src="assets/park-jihye.webp" alt="바이올리니스트 박지혜" loading="lazy" />
+                  <div class="invite-copy">
+                    <span class="tag">클래식 연주</span>
+                    <p>바이올리니스트 박지혜의 감동적인 연주.</p>
+                  </div>
+                </article>
+                <!-- 뮤지컬 -->
+                <article class="invite-card">
+                  <img class="invite-hero-img" src="assets/joypeople.webp" alt="뮤지컬 스크루테이프의 편지" loading="lazy" />
+                  <div class="invite-copy">
+                    <span class="tag">뮤지컬</span>
+                    <p>스크루테이프의 편지. 영혼의 전쟁을 무대 위에 올린 감동의 뮤지컬.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="wishlist" class="section">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <p class="kicker">WISHLIST CAMPAIGN</p>
+              <h2>전도자 위시리스트</h2>
+            </div>
+            <p class="section-lead">
+              초청의 자리로 연결되도록 작정하고, 기도하고, 관계 안에서
+              실천합니다. 아래 항목 중 할 수 있는 순종을 체크해 보세요.
+            </p>
+          </div>
+
+          <div class="mission-intro reveal">
+            <div class="mission-note">
+              <strong>우리는 모두 전도자입니다. 모든 일상이 전도가 됩니다.</strong>
+              <span>
+                카드 사진, 출석사진, 문자/카톡 캡쳐, 함께 찍은 사진 등으로
+                위시리스트 실천을 인증합니다.
+              </span>
+            </div>
+            <div class="mission-note">
+              <strong>태신자 5명을 마음에 품고 시작합니다.</strong>
+              <span>
+                부담보다 기쁨으로, 설득보다 행복으로. 작은 순종이 초청의
+                통로가 됩니다.
+              </span>
+            </div>
+          </div>
+
+          <ol class="wishlist-list reveal">
+            <li class="wishlist-item">
+              <span class="check-box" aria-hidden="true"></span>
+              <div>
+                <strong>태신자 5명 작정하기</strong>
+                <span>인증: 위시리스트 카드 사진</span>
+              </div>
+            </li>
+            <li class="wishlist-item">
+              <span class="check-box" aria-hidden="true"></span>
+              <div>
+                <strong>태신자를 위해 새벽기도 참석하기</strong>
+                <span>인증: 출석사진 또는 교회 앞 인증샷</span>
+              </div>
+            </li>
+            <li class="wishlist-item">
+              <span class="check-box" aria-hidden="true"></span>
+              <div>
+                <strong>안부문자 보내기</strong>
+                <span>인증: 문자/카톡 캡쳐</span>
+              </div>
+            </li>
+            <li class="wishlist-item">
+              <span class="check-box" aria-hidden="true"></span>
+              <div>
+                <strong>전도 관련 신앙서적 읽기</strong>
+                <span>인증: 책 표지 사진</span>
+              </div>
+            </li>
+            <li class="wishlist-item">
+              <span class="check-box" aria-hidden="true"></span>
+              <div>
+                <strong>태신자와 인증샷</strong>
+                <span>인증: 함께 찍은 사진</span>
+              </div>
+            </li>
+            <li class="wishlist-item">
+              <span class="check-box" aria-hidden="true"></span>
+              <div>
+                <strong>태신자를 위한 작은 선물 준비</strong>
+                <span>인증: 선물 사진</span>
+              </div>
+            </li>
+            <li class="wishlist-item">
+              <span class="check-box" aria-hidden="true"></span>
+              <div>
+                <strong>태신자에게 손편지 쓰기</strong>
+                <span>인증: 편지 사진</span>
+              </div>
+            </li>
+            <li class="wishlist-item">
+              <span class="check-box" aria-hidden="true"></span>
+              <div>
+                <strong>내가 만난 하나님 기록하기</strong>
+                <span>인증: 기록 사진</span>
+              </div>
+            </li>
+            <li class="wishlist-item">
+              <span class="check-box" aria-hidden="true"></span>
+              <div>
+                <strong>태신자 기도제목 물어보기</strong>
+                <span>인증: 문자/카톡 캡쳐</span>
+              </div>
+            </li>
+            <li class="wishlist-item">
+              <span class="check-box" aria-hidden="true"></span>
+              <div>
+                <strong>태신자를 위한 기도의 동역자 세우기</strong>
+                <span>인증: 함께한 사진</span>
+              </div>
+            </li>
+            <li class="wishlist-item">
+              <span class="check-box" aria-hidden="true"></span>
+              <div>
+                <strong>새생명 축제 초청하기</strong>
+                <span>인증: 교회에서 함께 찍은 사진</span>
+              </div>
+            </li>
+          </ol>
+
+          <!-- 위시리스트 인증 참여 CTA 버튼 -->
+          <div class="wishlist-cta reveal">
+            <a class="button cta-blue" href="https://lighton-certification-frontend.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              위시리스트 인증 참여하기
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing">
+        <div class="closing-mark reveal">2026 NEW LIFE FESTIVAL</div>
+        <h2 class="reveal">
+          <span>생명의 빛을 켜는 시간</span>
+          <span class="light-on-word">LIGHT ON</span>
+        </h2>
+        <p class="reveal">
+          가장 설득력 있는 전도지는 당신의 행복입니다. 오늘의 일상에서 한
+          사람을 품고, 한 번 더 기도하고, 한 걸음 더 초대합니다.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>2026 새생명축제 Light On</span>
+      <span>오륜교회</span>
+    </footer>
+
+    <script>
+      // === 1. 프리미엄 스크롤 진입 애니메이션 (CSS 변수 기반 stagger) ===
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              revealObserver.unobserve(entry.target);
+            }
+          }
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+      );
+
+      // 각 섹션 내에서 reveal 요소의 순서를 CSS 변수로 전달
+      document.querySelectorAll(".section, .hero, .closing").forEach((section) => {
+        const reveals = section.querySelectorAll(".reveal");
+        reveals.forEach((el, i) => {
+          el.style.setProperty("--reveal-index", i);
+          revealObserver.observe(el);
+        });
+      });
+
+      // 섹션 바깥의 reveal 요소도 처리
+      document.querySelectorAll(".reveal").forEach((el) => {
+        if (!el.style.getPropertyValue("--reveal-index")) {
+          el.style.setProperty("--reveal-index", 0);
+          revealObserver.observe(el);
+        }
+      });
+
+      // === 2. 모바일 네비게이션 토글 ===
+      const menuToggle = document.querySelector(".menu-toggle");
+      const mobileNav = document.querySelector(".mobile-nav");
+
+      if (menuToggle && mobileNav) {
+        menuToggle.addEventListener("click", () => {
+          const isOpen = mobileNav.classList.toggle("open");
+          menuToggle.classList.toggle("active");
+          menuToggle.setAttribute("aria-expanded", isOpen);
+          // 배경 스크롤 방지
+          document.body.style.overflow = isOpen ? "hidden" : "";
+        });
+
+        // 모바일 네비 링크 클릭 시 메뉴 닫기
+        mobileNav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileNav.classList.remove("open");
+            menuToggle.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+            document.body.style.overflow = "";
+          });
+        });
+      }
+
+      // === 3. 위시리스트 체크박스 인터랙션 ===
+      document.querySelectorAll(".wishlist-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          item.classList.toggle("checked");
+        });
+      });
+
+      // === 4. 네비게이션 스크롤 시 배경 변화 ===
+      const header = document.querySelector(".site-header");
+      if (header) {
+        let lastScroll = 0;
+        window.addEventListener("scroll", () => {
+          const scrollY = window.scrollY;
+          // 히어로 영역을 볬어나면 네비 배경 강화
+          if (scrollY > 100) {
+            header.style.background = "rgba(255, 255, 255, 0.96)";
+            header.style.boxShadow = "0 4px 20px rgba(8, 31, 55, 0.08)";
+          } else {
+            header.style.background = "rgba(255, 255, 255, 0.86)";
+            header.style.boxShadow = "none";
+          }
+          lastScroll = scrollY;
+        }, { passive: true });
+      }
+    </script>
+  </body>
+</html>
