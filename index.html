@@ -710,7 +710,7 @@
       }
 
       .culture-group-header h3 span {
-        display: inline;
+        display: block;
       }
 
       .culture-group-header p {
@@ -745,7 +745,8 @@
       }
 
       .culture-group-cards .invite-copy h3 {
-        display: none;
+        margin-top: 8px;
+        font-size: clamp(24px, 2.2vw, 36px);
       }
 
       /* === 시네마틱 초청 카드 === */
@@ -1485,17 +1486,22 @@
 
           <div class="invite-grid">
             <!-- 위로의 아침 — 이호선 교수 -->
-            <article class="invite-card reveal">
-              <img class="invite-hero-img" src="assets/lee-hosun.webp" alt="이호선 교수 — 위로의 아침 강사" loading="lazy" />
-              <div class="invite-copy">
+            <div class="culture-group reveal">
+              <div class="culture-group-header" style="border-bottom: none;">
                 <span class="tag">위로의 아침</span>
-                <h3>
-                  <span>5월 27일 수요일</span>
-                  <span class="time-unit">오전 예배</span>
-                </h3>
-                <p>강사: 이호선 교수. 지친 영혼에게 전하는 따뜻한 위로와 복음의 소망.</p>
+                <h3>5월 27일 수요일 <span>오전 11:00</span></h3>
+                <p>지친 영혼에게 전하는 따뜻한 위로와 복음의 소망.</p>
               </div>
-            </article>
+              <div class="culture-group-cards" style="grid-template-columns: 1fr;">
+                <article class="invite-card" style="min-height: 420px;">
+                  <img class="invite-hero-img" src="assets/lee-hosun.webp" alt="이호선 교수 — 위로의 아침 강사" loading="lazy" style="object-position: center 25%;" />
+                  <div class="invite-copy">
+                    <p style="margin-top:12px;">이호선 교수와 함께하는 특별한 아침 예배.</p>
+                    <h3 style="margin-top:8px;">이호선 교수</h3>
+                  </div>
+                </article>
+              </div>
+            </div>
             <!-- 문화의 밤 — 통합 그룹 -->
             <div class="culture-group reveal">
               <div class="culture-group-header">
@@ -1509,7 +1515,8 @@
                   <img class="invite-hero-img" src="assets/park-jihye.webp" alt="바이올리니스트 박지혜" loading="lazy" />
                   <div class="invite-copy">
                     <span class="tag">클래식 연주</span>
-                    <p>바이올리니스트 박지혜의 감동적인 연주.</p>
+                    <p style="margin-top:12px;">영혼을 울리는 섬세한 선율, 깊은 감동과 위로를 전하는 무대.</p>
+                    <h3 style="margin-top:8px;">바이올리니스트 박지혜</h3>
                   </div>
                 </article>
                 <!-- 뮤지컬 -->
@@ -1517,7 +1524,8 @@
                   <img class="invite-hero-img" src="assets/joypeople.webp" alt="뮤지컬 스크루테이프의 편지" loading="lazy" />
                   <div class="invite-copy">
                     <span class="tag">뮤지컬</span>
-                    <p>스크루테이프의 편지. 영혼의 전쟁을 무대 위에 올린 감동의 뮤지컬.</p>
+                    <p style="margin-top:12px;">스크루테이프의 편지. 영혼의 전쟁을 무대 위에 올린 감동의 뮤지컬.</p>
+                    <h3 style="margin-top:8px;">극단 조이피플</h3>
                   </div>
                 </article>
               </div>
