@@ -650,53 +650,62 @@
       .wishlist-list {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0 22px;
+        gap: 0 28px;
         margin: 0;
-        padding: 28px;
+        padding: 32px;
         border: 1px solid #b8d7ef;
         border-radius: var(--radius);
         background: #ffffff;
         box-shadow: var(--shadow);
+        /* 번호 리스트를 ol 기본 카운터로 표시 */
         list-style: none;
+        counter-reset: wish;
       }
 
       .wishlist-item {
         position: relative;
-        display: grid;
-        grid-template-columns: 34px minmax(0, 1fr);
-        gap: 14px;
-        align-items: start;
-        min-height: 76px;
-        padding: 18px 0;
-        border-bottom: 1px solid #e3edf5;
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        padding: 14px 0;
+        border-bottom: 1px solid #e8f0f7;
+      }
+
+      /* 번호 카운터 — 체크박스 대신 깔끔한 숫자 */
+      .wishlist-item::before {
+        counter-increment: wish;
+        content: counter(wish);
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: var(--blue);
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: 900;
+        line-height: 1;
       }
 
       .wishlist-item:nth-last-child(-n + 2) {
         border-bottom: 0;
       }
 
-      .check-box {
-        width: 28px;
-        height: 28px;
-        margin-top: 2px;
-        border: 3px solid #8aa8cf;
-        border-radius: 5px;
-        background: #ffffff;
-      }
-
       .wishlist-item strong {
         display: block;
         color: var(--ink);
-        font-size: 21px;
+        font-size: 18px;
         font-weight: 950;
         line-height: 1.35;
       }
 
       .wishlist-item span {
         display: block;
-        margin-top: 5px;
+        margin-top: 4px;
         color: var(--muted);
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 800;
         line-height: 1.45;
       }
@@ -1075,47 +1084,7 @@
         width: 100%;
       }
 
-      /* 위시리스트 체크박스 — 인터랙티브 */
-      .wishlist-item {
-        cursor: pointer;
-        transition: background 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        border-radius: 6px;
-        padding: 18px 12px;
-        margin: 0 -12px;
-      }
 
-      .wishlist-item:hover {
-        background: rgba(0, 88, 155, 0.04);
-      }
-
-      .check-box {
-        cursor: pointer;
-        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        display: grid;
-        place-items: center;
-      }
-
-      .check-box:hover {
-        border-color: var(--blue);
-        background: rgba(0, 88, 155, 0.06);
-      }
-
-      .wishlist-item.checked .check-box {
-        border-color: var(--blue);
-        background: var(--blue);
-      }
-
-      .wishlist-item.checked .check-box::after {
-        content: "✓";
-        color: #ffffff;
-        font-size: 16px;
-        font-weight: 900;
-        line-height: 1;
-      }
-
-      .wishlist-item.checked strong {
-        color: var(--blue);
-      }
 
       /* === 모바일 네비게이션 === */
       .menu-toggle {
@@ -1463,7 +1432,7 @@
             </p>
             <div class="hero-actions">
               <a class="button primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfJlyvMXOAZVWZcZ-pP4EaTNe54ihep2gj_MZsWO85fP7dk3A/viewform" target="_blank" rel="noopener noreferrer">✏️ 태신자 작정하기</a>
-              <a class="button ghost" href="#wishlist">인증 참여하기</a>
+              <a class="button ghost" href="#wishlist">전도자 위시리스트</a>
             </div>
           </div>
         </div>
@@ -1615,7 +1584,7 @@
             </div>
             <p class="section-lead">
               초청의 자리로 연결되도록 작정하고, 기도하고, 관계 안에서
-              실천합니다. 아래 항목 중 할 수 있는 순종을 체크해 보세요.
+              실천합니다.
             </p>
           </div>
 
@@ -1637,83 +1606,17 @@
           </div>
 
           <ol class="wishlist-list reveal">
-            <li class="wishlist-item">
-              <span class="check-box" aria-hidden="true"></span>
-              <div>
-                <strong>태신자 5명 작정하기</strong>
-                <span>인증: 위시리스트 카드 사진</span>
-              </div>
-            </li>
-            <li class="wishlist-item">
-              <span class="check-box" aria-hidden="true"></span>
-              <div>
-                <strong>태신자를 위해 새벽기도 참석하기</strong>
-                <span>인증: 출석사진 또는 교회 앞 인증샷</span>
-              </div>
-            </li>
-            <li class="wishlist-item">
-              <span class="check-box" aria-hidden="true"></span>
-              <div>
-                <strong>안부문자 보내기</strong>
-                <span>인증: 문자/카톡 캡쳐</span>
-              </div>
-            </li>
-            <li class="wishlist-item">
-              <span class="check-box" aria-hidden="true"></span>
-              <div>
-                <strong>전도 관련 신앙서적 읽기</strong>
-                <span>인증: 책 표지 사진</span>
-              </div>
-            </li>
-            <li class="wishlist-item">
-              <span class="check-box" aria-hidden="true"></span>
-              <div>
-                <strong>태신자와 인증샷</strong>
-                <span>인증: 함께 찍은 사진</span>
-              </div>
-            </li>
-            <li class="wishlist-item">
-              <span class="check-box" aria-hidden="true"></span>
-              <div>
-                <strong>태신자를 위한 작은 선물 준비</strong>
-                <span>인증: 선물 사진</span>
-              </div>
-            </li>
-            <li class="wishlist-item">
-              <span class="check-box" aria-hidden="true"></span>
-              <div>
-                <strong>태신자에게 손편지 쓰기</strong>
-                <span>인증: 편지 사진</span>
-              </div>
-            </li>
-            <li class="wishlist-item">
-              <span class="check-box" aria-hidden="true"></span>
-              <div>
-                <strong>내가 만난 하나님 기록하기</strong>
-                <span>인증: 기록 사진</span>
-              </div>
-            </li>
-            <li class="wishlist-item">
-              <span class="check-box" aria-hidden="true"></span>
-              <div>
-                <strong>태신자 기도제목 물어보기</strong>
-                <span>인증: 문자/카톡 캡쳐</span>
-              </div>
-            </li>
-            <li class="wishlist-item">
-              <span class="check-box" aria-hidden="true"></span>
-              <div>
-                <strong>태신자를 위한 기도의 동역자 세우기</strong>
-                <span>인증: 함께한 사진</span>
-              </div>
-            </li>
-            <li class="wishlist-item">
-              <span class="check-box" aria-hidden="true"></span>
-              <div>
-                <strong>새생명 축제 초청하기</strong>
-                <span>인증: 교회에서 함께 찍은 사진</span>
-              </div>
-            </li>
+            <li class="wishlist-item"><div><strong>태신자 5명 작정하기</strong><span>위시리스트 카드 사진</span></div></li>
+            <li class="wishlist-item"><div><strong>태신자를 위해 새벽기도 참석하기</strong><span>출석사진 또는 교회 앞 인증샷</span></div></li>
+            <li class="wishlist-item"><div><strong>안부문자 보내기</strong><span>문자/카톡 캡쳐</span></div></li>
+            <li class="wishlist-item"><div><strong>전도 관련 신앙서적 읽기</strong><span>책 표지 사진</span></div></li>
+            <li class="wishlist-item"><div><strong>태신자와 인증샷</strong><span>함께 찍은 사진</span></div></li>
+            <li class="wishlist-item"><div><strong>태신자를 위한 작은 선물 준비</strong><span>선물 사진</span></div></li>
+            <li class="wishlist-item"><div><strong>태신자에게 손편지 쓰기</strong><span>편지 사진</span></div></li>
+            <li class="wishlist-item"><div><strong>내가 만난 하나님 기록하기</strong><span>기록 사진</span></div></li>
+            <li class="wishlist-item"><div><strong>태신자 기도제목 물어보기</strong><span>문자/카톡 캡쳐</span></div></li>
+            <li class="wishlist-item"><div><strong>태신자를 위한 기도의 동역자 세우기</strong><span>함께한 사진</span></div></li>
+            <li class="wishlist-item"><div><strong>새생명 축제 초청하기</strong><span>교회에서 함께 찍은 사진</span></div></li>
           </ol>
 
           <!-- 위시리스트 인증 참여 CTA 버튼 -->
@@ -1799,12 +1702,7 @@
         });
       }
 
-      // === 3. 위시리스트 체크박스 인터랙션 ===
-      document.querySelectorAll(".wishlist-item").forEach((item) => {
-        item.addEventListener("click", () => {
-          item.classList.toggle("checked");
-        });
-      });
+
 
       // === 4. 네비게이션 스크롤 시 배경 변화 ===
       const header = document.querySelector(".site-header");
