@@ -1225,21 +1225,22 @@
         }
 
         .hero {
-          min-height: 760px;
+          min-height: 100svh;
         }
 
         .hero::before {
           background-position: 28% 56%;
         }
 
+        /* 모바일: 상단 이미지 노출을 위해 그래디언트를 하단에만 집중 */
         .hero::after {
           background:
-            linear-gradient(180deg, rgba(3, 13, 23, 0.34), rgba(3, 13, 23, 0.12) 36%, #06131f 100%),
-            linear-gradient(90deg, rgba(3, 13, 23, 0.08), rgba(3, 13, 23, 0.82));
+            linear-gradient(180deg, rgba(3, 13, 23, 0.12) 0%, transparent 20%, rgba(3, 13, 23, 0.6) 54%, #06131f 100%),
+            linear-gradient(90deg, rgba(3, 13, 23, 0.06), rgba(3, 13, 23, 0.7));
         }
 
         .hero-inner {
-          min-height: 760px;
+          min-height: 100svh;
           width: min(100% - 32px, 1220px);
           padding-bottom: 48px;
         }
@@ -1254,7 +1255,8 @@
         }
 
         .hero-slogan {
-          font-size: 21px;
+          font-size: 19px;
+          line-height: 1.5;
         }
 
         .speaker-grid,
